@@ -161,6 +161,7 @@ def display_data(df):
     while (view_data == 'yes'):
         while view_data not in ('yes', 'no'):
             view_data = input("Enter a valid answer: yes or no\n").lower()
+        pd.set_option('display.max_columns',200)
         print(df.iloc[start_loc : start_loc + 5])
         start_loc += 5
         view_data = input("Do you wish to continue? Enter yes or no\n").lower()
